@@ -5,6 +5,7 @@ import BookList from './BookList';
 
 export default function App() {
   const favBooks = [
+  {name: "HTML and CSS for beginners"},
   { name: "JS for beginners" },
   { name: "React basics" },
   { name: "React Router overview" }
