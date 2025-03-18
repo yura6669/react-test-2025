@@ -2,6 +2,8 @@
 
 import Product from './Product';
 import BookList from './BookList';
+import  Alert  from './Alert';
+import UserMenu from './UserMenu';
 
 export default function App() {
   const favBooks = [
@@ -9,7 +11,7 @@ export default function App() {
   { name: "JS for beginners" },
   { name: "React basics" },
   { name: "React Router overview" }
-];
+  ];
   return (
     <>
       <h1>Best selling</h1>
@@ -26,6 +28,19 @@ export default function App() {
       />
       <h2>Books of the week</h2>
       <BookList books={favBooks} />
+      <Alert variant="info" outlined elevated>
+        Would you like to browse our recommended products?
+      </Alert>
+      <Alert variant="error">
+        There was an error during your last transaction
+      </Alert>
+      <Alert variant="success">
+        Payment received, thank you for your purchase
+      </Alert>
+      <Alert variant="warning">
+        Please update your profile contact information
+      </Alert>
+      <UserMenu name="Yurii Shyian" />
     </>
   );
 }
